@@ -132,6 +132,9 @@ const Header: React.FC = () => {
           </Select>
         </FormControl>
       </MenuItem>
+			<MenuItem>
+				{i18n.t('Work Week')}: {workWeek}
+			</MenuItem>
     </Menu>
   );
 

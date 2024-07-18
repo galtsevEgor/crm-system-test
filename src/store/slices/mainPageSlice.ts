@@ -34,8 +34,6 @@ export const fetchTopDesigners = createAsyncThunk<
       totalTasksCompleted: designer.issues.filter(issue => issue.status === 'Done').length,
       inProgressTasks: designer.issues.filter(issue => issue.status === 'In Progress').length,
     };
-    console.log(designerWithDetails);
-    
     results.push(designerWithDetails)
   }
     return { results };
@@ -61,7 +59,6 @@ const calculateTaskTime = (issue: IDesignIssue): number => {
   const startDate = new Date(issue.date_started_by_designer as string);
   const endDate = new Date(issue.date_finished_by_designer as string);
   const timeDiff = endDate.getTime() - startDate.getTime();
-  console.log(Math.abs(timeDiff / (1000 * 60 * 60)))
   return Math.abs(timeDiff / (1000 * 60 * 60));
 };
 const mainPageSlice = createSlice({
