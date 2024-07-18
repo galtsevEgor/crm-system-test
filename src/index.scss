@@ -1,0 +1,23 @@
+
+:root {
+  --primary-color: #1976d2; 
+  --background-color: #ffffff;
+  --text-color: #202020; 
+  --table-colors: #1976d2, #4caf50, #ffeb3b, #ff5722; 
+}
+
+[data-theme='dark'] {
+  --primary-color: #90caf9; 
+  --background-color: #121212;
+  --text-color: #ffffff; 
+  --table-colors: #0088FE, #00C49F, #FFBB28, #FF8042; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
